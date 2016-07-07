@@ -3,3 +3,7 @@ _site/
 .jekyll-metadata
 _pdf
 .idea/
+/bin/
+.project
+.settings
+.classpath

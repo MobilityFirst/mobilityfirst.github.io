@@ -6,7 +6,6 @@ sidebar: documentation_sidebar
 permalink: /server_getting_started/
 toc: true
 ---
-
 Prerequisites: `JRE1.8+`, `bash`, `mongodb` (optional).
 
 ### Obtaining GNS
@@ -17,6 +16,7 @@ The GNS is a gigapaxos application, which means that gigapaxos is the distribute
 
 Start a single-node, local GNS server as 
 
+[run]: # (options)
 ```
 bin/gpServer.sh start all
 ```
@@ -30,7 +30,7 @@ To connect to the GNS server above using a Java client, we will use a simple cli
 bin/gpClient.sh edu.umass.cs.gnsclient.examples.ClientExample
 ```
 
-The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to this [troubleshooting TBD](.) page for common possible reasons.
+The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to this [troubleshooting TBD] page for common possible reasons.
 
 ### In-memory database mode
 If you prefer to not use mongodb, uncomment or enter `IN_MEMORY_DB=true` in the default configuration properties file, `gigapaxos.properties`. Using the in-memory mode does not affect durability or fault-tolerance as they are ensured by gigapaxos, however, the database size will be limited by memory, so it is not recommended for production use.
@@ -72,7 +72,7 @@ bin/gpClient.sh -DgigapaxosConfig=conf/gnsclient.3local.properties edu.umass.cs.
 ```
 
 ### Distributed GNS 
-Firing up distributed GNS servers on remote machines is nearly identical. It is necessary that the username on all of the remote machines is the same and, if different from the current shell's username, it must be specified using the USERNAME property in the properties file. It is convenient to set up passwordless ssh a priori from the local machine to the remote hosts, otherwise the script will prompt for a password for each remote host.
+Firing up distributed GNS servers on remote machines is nearly identical. It is necessary that the username on all of the remote machines is the same and, if different from the current shell's username, it must be specified using the `USERNAME` property in the properties file. It is convenient to set up passwordless ssh a priori from the local machine to the remote hosts, otherwise the script will prompt for a password for each remote host.
 
 ```
 bin/gpServer.sh -DgigapaxosConfig=conf/gnsserver.ec2.properties restart all
