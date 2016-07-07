@@ -2,7 +2,7 @@ permalink: /:year/:month/:day/:title/
 # this sets the style for permalinks. The date formatting (/:year/:month/:day/) will only apply to blog posts, while the pages will just show the title.
 url: http://gns.name
 # where you plan to publish your site
-baseurl: "/GNS"
+baseurl: "/GNS-website"
 # any subdirectory that appears after the domain where you're publishing your site
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -10,7 +10,7 @@ topnav_title: Global Name Service
 # this appears on the top navigation bar next to the home button
 site_title: Global Name Service
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-company_name: 
+company_name: "MobilityFirst"
 # this appears in the footer
 github_editme_path: 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
