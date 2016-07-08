@@ -12,11 +12,7 @@
           "url": "/cli/"
         },
         {
-          "title": "Configuration Properties",
-          "url": "/configuration_properties/"
-        },
-        {
-          "title": "Buidling from Source",
+          "title": "Build from Source",
           "url": "/build_from_source/"
         },
         {

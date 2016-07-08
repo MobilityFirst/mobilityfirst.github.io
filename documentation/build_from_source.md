@@ -18,4 +18,4 @@ ant
 
 A successful build should print "BUILD SUCCESSFUL" at the end and place the compiled jars in the `jars/` sub-directory.
 
-At this point, you can proceed as-is with the instructions in the [Getting Started]({{/getting_started/ | prepend: site.baseurl}}) or other pages.
+At this point, you can proceed as-is with the instructions in the [Getting Started]({{ site.baseurl }}/getting_started/) or other pages.
