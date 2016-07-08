@@ -1,8 +1,8 @@
 ---
-title: "Troubleshooting"
+title: "FAQ"
 last_updated: June 29, 2016
 sidebar: documentation_sidebar
-permalink: /server_troubleshooting/
+permalink: /faq/
 toc: true
 ---
 

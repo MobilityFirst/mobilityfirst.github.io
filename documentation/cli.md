@@ -1,8 +1,8 @@
 ---
 title: "Command Line Interface"
-last_updated: June 29, 2016
+last_updated: July 8, 2016
 sidebar: documentation_sidebar
-permalink: /client_cli/
+permalink: /cli/
 toc: true
 ---
 

@@ -4,74 +4,32 @@
       "title": "Server",
       "layer2": [
         {
-          "title": "Obtaining Server",
-          "url": "/server_obtaining/"
-        },
-        {
           "title": "Getting Started",
-          "url": "/server_getting_started/"
-        },
-        {
-          "title": "Start a GNS Server",
-          "layer3": [
-            {
-              "title": "Single Node, Locally",
-              "url": "/server_deploy_single_local/"
-            },
-            {
-              "title": "Distributed, Locally",
-              "url": "/server_deploy_distributed_local/"
-            },
-            {
-              "title": "Distributed, Remotely",
-              "url": "/server_deploy_distributed_remote/"
-            }
-          ],
-        },
-        {
-          "title": "Server gigapaxos.properties file",
-          "url": "/server_gigapaxos_properties/"
-        },
-        {
-          "title": "Troubleshooting",
-          "url": "/server_troubleshooting/"
-        }
-      ]
-    },
-    {
-      "title": "Client",
-      "layer2": [
-        {
-          "title": "Obtaining Client",
-          "url": "/client_obtaining/"
+          "url": "/getting_started/"
         },
         {
           "title": "Command Line Interface",
-          "url": "/client_cli/"
+          "url": "/cli/"
         },
         {
-          "title": "Simple Example",
-          "url": "/client_simple_example/"
+          "title": "Configuration Properties",
+          "url": "/configuration_properties/"
         },
         {
-          "title": "Select Queries",
-          "url": "/client_select_queries/"
+          "title": "Buidling from Source",
+          "url": "/build_from_source/"
         },
         {
-          "title": "Acess Control Lists (ACLs)",
-          "url": "/client_ACL_example/"
+          "title": "Troubleshooting",
+          "url": "/troubleshooting/"
         },
         {
-          "title": "Client gigapaxos.properties file",
-          "url": "/client_gigapaxos_properties/"
+          "title": "FAQ",
+          "url": "/faq/"
         },
         {
           "title": "Javadoc",
           "url": "/javadoc/index.html"
-        },
-        {
-          "title": "Troubleshooting",
-          "url": "/client_troubleshooting/"
         }
       ]
     },

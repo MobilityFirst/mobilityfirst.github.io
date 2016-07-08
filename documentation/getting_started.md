@@ -1,11 +1,12 @@
 ---
 title: "Getting Started"
 keywords: installation
-last_updated: June 23, 2016
+last_updated: July 8, 2016
 sidebar: documentation_sidebar
-permalink: /server_getting_started/
+permalink: /getting_started/
 toc: true
 ---
+
 Prerequisites: `JRE1.8+`, `bash`, `mongodb` (optional).
 
 ### Obtaining GNS
@@ -16,7 +17,6 @@ The GNS is a gigapaxos application, which means that gigapaxos is the distribute
 
 Start a single-node, local GNS server as 
 
-[run]: # (options)
 ```
 bin/gpServer.sh start all
 ```
