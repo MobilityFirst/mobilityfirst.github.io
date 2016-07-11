@@ -47,7 +47,7 @@ To add a page you must do two things:
   * title: The title rendered at the top of the page. The quotation marks are optional but let us include special characters like colons.
   * last_updated: This field will be rendered in the footer.
   * sidebar: The sidebar that will appear on this page. If no sidebar is specified then the page will render without one. This is also used for a consitency check between the title listed in the sidebar and the title of the page. Currently there is only one sidebar: documentation_sidebar
-  * permalink: Appended to the site's base url this forms the URL that can be used to access this page. 
+  * permalink: NOT RECOMENDED. Instead it is recommended that you use the URL that is automatically generated for each file based on its folder and path. Appended to the site's base url this forms the URL that can be used to access this page. 
   * toc: Set to false to remove the table of contents generated at the beginning of the page. NOTE: Header 1, single #, elements are not included in the TOC, only Header 2 and below.
 2. Add the page to the sidebar file so that a link will be rendered in the sidebar. This file can be found at `_data/sidebars/documentation_sidebar.json`. You must include a title and and url field for the sidebar item to be properly rendered. The existing content of the sidebar file should serve as a good example of how to add content.
 
