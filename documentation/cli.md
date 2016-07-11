@@ -29,7 +29,7 @@ Connected to GNS.
 GNS CLI - Connected to GNS>
 ```
 
-Create an account as follows using your own email address:
+Create an account as follows using your own email address as
 
 ```
 GNS CLI - Connected to GNS>account_create support@gns.name some_password
