@@ -1,4 +1,4 @@
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 url: http://gns.name
 # where you plan to publish your site
