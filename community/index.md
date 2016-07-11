@@ -1,6 +1,4 @@
 ---
-layout: default_no_sidebar
-permalink: /community/
 toc: false
 ---
 

@@ -2,11 +2,10 @@
 title: "Command Line Interface"
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
-permalink: /cli/
 toc: true
 ---
 
-Prerequisites: `JRE1.8+`, `bash`, `mongodb` (optional)
+{% include prerequisites.html %}
 
 Start a single-node, local server as
 

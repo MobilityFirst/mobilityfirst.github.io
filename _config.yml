@@ -55,7 +55,6 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: docuemntation_sidebar
   -
     scope:
       path: ""
@@ -74,7 +73,6 @@ defaults:
       layout: "post"
       comments: true
       search: true
-      sidebar: tags_sidebar
 
 # these are defaults used for the frontmatter for these file types
 

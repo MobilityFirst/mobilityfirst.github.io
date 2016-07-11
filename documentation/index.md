@@ -1,13 +1,11 @@
 ---
 title: "Getting Started"
-keywords: installation
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
-permalink: /getting_started/
 toc: true
 ---
 
-Prerequisites: `JRE1.8+`, `bash`, `mongodb` (optional).
+{% include prerequisites.html %}
 
 ## Obtaining GNS
 Download the latest, stable, binary-only package from the [GNS releases page](https://github.com/MobilityFirst/GNS/releases).
@@ -21,7 +19,7 @@ Start a single-node, local GNS server as
 bin/gpServer.sh start all
 ```
 
-To connect to this GNS server using the command-line interface (CLI), refer to the [CLI introduction page]({{ site.baseurl }}/cli/).
+To connect to this GNS server using the command-line interface (CLI), refer to the [CLI introduction page]({{ site.baseurl }}/documentation/cli/).
 
 ## Simple client example
 To connect to the GNS server above using a Java client, we will use a simple client, [ClientExample](https://github.com/MobilityFirst/GNS/blob/master/src/edu/umass/cs/gnsclient/examples/ClientExample.java) [(doc)](http://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/examples/ClientExample.html), that creates a record keyed by a globally unique identifier (GUID), performs a few field reads and writes, and deletes the record. Run this example client as
@@ -30,7 +28,7 @@ To connect to the GNS server above using a Java client, we will use a simple cli
 bin/gpClient.sh edu.umass.cs.gnsclient.examples.ClientExample
 ```
 
-The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to this [troubleshooting]({{ site.baseurl }}/troubleshooting/) page for common possible reasons.
+The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to this [troubleshooting]({{ site.baseurl }}/documentation/troubleshooting/) page for common possible reasons.
 
 ## In-memory database mode
 If you prefer to not use mongodb, uncomment or enter `IN_MEMORY_DB=true` in the default configuration properties file, `gigapaxos.properties`. Using the in-memory mode does not affect durability or fault-tolerance as they are ensured by gigapaxos, however, the database size will be limited by memory, so it is not recommended for production use.

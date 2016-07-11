@@ -5,23 +5,23 @@
       "layer2": [
         {
           "title": "Getting Started",
-          "url": "/getting_started/"
+          "url": "/documentation/"
         },
         {
           "title": "Command Line Interface",
-          "url": "/cli/"
+          "url": "/documentation/cli/"
         },
         {
           "title": "Build from Source",
-          "url": "/build_from_source/"
+          "url": "/documentation/build_from_source/"
         },
         {
           "title": "Troubleshooting",
-          "url": "/troubleshooting/"
+          "url": "/documentation/troubleshooting/"
         },
         {
           "title": "FAQ",
-          "url": "/faq/"
+          "url": "/documentation/faq/"
         },
         {
           "title": "Javadoc",

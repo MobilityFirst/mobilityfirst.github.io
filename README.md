@@ -1,8 +1,8 @@
 # GNS Website
 
-This is the website for the Global Name Service (GNS). It is based on the [Jekyll Documentation Theme](http://idratherbewriting.com/documentation-theme-jekyll/) ([Github](https://github.com/tomjohnson1492/documentation-theme-jekyll))
+This is the website for the Global Name Service (GNS). It is based on version 5 of the [Jekyll Documentation Theme](http://idratherbewriting.com/documentation-theme-jekyll/) ([Github](https://github.com/tomjohnson1492/documentation-theme-jekyll))
 
-## Editing content
+## Where to edit content
 There are two ways to edit the content: by cloning the repository locally and making changes or by using the Github web interface.
 
 ### Locally
@@ -46,7 +46,7 @@ To add a page you must do two things:
   ```
   * title: The title rendered at the top of the page. The quotation marks are optional but let us include special characters like colons.
   * last_updated: This field will be rendered in the footer.
-  * sidebar: The sidebar that this page should appear under. This is used for a consitency check between the title listed in the sidebar and the title of the page. Currently there is only one sidebar: documentation_sidebar
+  * sidebar: The sidebar that will appear on this page. If no sidebar is specified then the page will render without one. This is also used for a consitency check between the title listed in the sidebar and the title of the page. Currently there is only one sidebar: documentation_sidebar
   * permalink: Appended to the site's base url this forms the URL that can be used to access this page. 
   * toc: Set to false to remove the table of contents generated at the beginning of the page. NOTE: Header 1, single #, elements are not included in the TOC, only Header 2 and below.
 2. Add the page to the sidebar file so that a link will be rendered in the sidebar. This file can be found at `_data/sidebars/documentation_sidebar.json`. You must include a title and and url field for the sidebar item to be properly rendered. The existing content of the sidebar file should serve as a good example of how to add content.
@@ -54,6 +54,10 @@ To add a page you must do two things:
 ### Editing content
 Markdown files for documentation can be found in the `documentation` folder. Be sure to include the YAML Front Matter block (enclosed by three hyphens) at the beginning of the Markdown file, as this is what ensures the page is rendered on the site and includes important information like the page title and permalink.
 
-To create a link to other pages in the wiki use this format: `{{ site.baseurl }}/other_page_permalink/`. To link to a page called "Other Page" write `[Other Page Link Title]({{ site.baseurl }}/other_page_permalink/)`
+To create a link to other pages in the wiki use this format: `{{ site.baseurl }}/my_folder/my_page/` where `my_folder` is the folder that the file is located in (i.e. `documentation`) and `my_page` is the file name, without the extension. Thus to link to a page called "Other Page" write `[other page link text]({{ site.baseurl }}/other_page_file_path/)`. If you make an index.md or index.html file in a folder you can access that page at the URL corresponding to its folder (i.e. `documentation` or `my_page`).
 
 For advanced instructions on editing content see the [Jekyll Documentation Theme site](http://idratherbewriting.com/documentation-theme-jekyll/). This site is a fork of this theme with some modifications so keep that in mind while browsing the original content. Many features and files have been removed in order to simplify things and YAML has been replaced with JSON in various places.
+
+### Single sourcing
+Content can be single sourced using the `include` tag. Add the content as an HTML file to the `_includes` directory and write `{% include filename.html %}` in the HTML or Markdown file where you want the content to appear. Includes can be sorted into subfolders: `{% include folder/file.html %}`. Unfortunately including Markdown is [not simple](https://stackoverflow.com/questions/7226076/in-jekyll-is-there-a-concise-way-to-render-a-markdown-partial) but can be done with: `{% capture file %}{% include file.md %}{% endcapture %}
+{{ file | markdownify }}`

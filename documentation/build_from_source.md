@@ -2,7 +2,6 @@
 title: "Build From Source"
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
-permalink: /build_from_source/
 toc: true
 ---
 
@@ -18,4 +17,4 @@ ant
 
 A successful build should print "BUILD SUCCESSFUL" at the end and place the compiled jars in the `jars/` sub-directory.
 
-At this point, you can proceed as-is with the instructions in the [Getting Started]({{ site.baseurl }}/getting_started/) or other pages.
+At this point, you can proceed as-is with the instructions in the [Getting Started]({{ site.baseurl }}/documentation/) or other pages.
