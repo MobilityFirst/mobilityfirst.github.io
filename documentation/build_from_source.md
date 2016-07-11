@@ -1,5 +1,5 @@
 ---
-title: "Build From Source"
+title: "Build from source"
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
 toc: true
