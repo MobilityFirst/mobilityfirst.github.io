@@ -1,7 +1,7 @@
 ---
 title: "Command Line Interface"
 last_updated: July 8, 2016
-sidebar: documentation_sidebar
+sidebar: GNS_sidebar
 toc: true
 ---
 
