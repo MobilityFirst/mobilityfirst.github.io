@@ -1,0 +1,18 @@
+{
+  "title": "GigaPaxos",
+  "layer1": [
+    {
+      "title": "Documentation",
+      "layer2": [
+        {
+          "title": "Getting Started",
+          "url": "/gigapaxos/doc/"
+        },
+        {
+          "title": "Configuration properties",
+          "url": "/gigapaxos/doc/configuration_properties/"
+        }
+      ]
+    }
+  ]
+}

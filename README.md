@@ -1,4 +1,4 @@
-# GNS Website
+# MobilityFirst Website
 
 This is the website for the Global Name Service (GNS). It is based on version 5 of the [Jekyll Documentation Theme](http://idratherbewriting.com/documentation-theme-jekyll/) ([Github](https://github.com/tomjohnson1492/documentation-theme-jekyll))
 
@@ -27,7 +27,7 @@ Markdown files for the site can be changed in Github's web interface and you can
 
 ## Formatting Content
 
-Most content you will want to edit can be found in the documentation folder.
+Most content you will want to edit can be found in the respective GNS and gigapaxos folders.
 
 ### Adding a page
 To add a page you must do two things:
@@ -39,7 +39,7 @@ To add a page you must do two things:
   ---
   title: "My Example Page"
   last_updated: June 28, 2016
-  sidebar: documentation_sidebar
+  sidebar: GNS_sidebar
   permalink: /my_example_page_permalink/
   toc: true
   ---
@@ -52,7 +52,7 @@ To add a page you must do two things:
 2. Add the page to the sidebar file so that a link will be rendered in the sidebar. This file can be found at `_data/sidebars/documentation_sidebar.json`. You must include a title and and url field for the sidebar item to be properly rendered. The existing content of the sidebar file should serve as a good example of how to add content.
 
 ### Editing content
-Markdown files for documentation can be found in the `documentation` folder. Be sure to include the YAML Front Matter block (enclosed by three hyphens) at the beginning of the Markdown file, as this is what ensures the page is rendered on the site and includes important information like the page title and permalink.
+Markdown files for for each project can be found in their respective folders. Be sure to include the YAML Front Matter block (enclosed by three hyphens) at the beginning of the Markdown file. as this is what ensures the page is rendered on the site and includes important information like the page title and permalink.
 
 To create a link to other pages in the wiki use this format: `{{ site.baseurl }}/my_folder/my_page/` where `my_folder` is the folder that the file is located in (i.e. `documentation`) and `my_page` is the file name, without the extension. Thus to link to a page called "Other Page" write `[other page link text]({{ site.baseurl }}/other_page_file_path/)`. If you make an index.md or index.html file in a folder you can access that page at the URL corresponding to its folder (i.e. `documentation` or `my_page`).
 

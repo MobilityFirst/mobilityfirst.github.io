@@ -4,15 +4,15 @@
       "title": "Topnav",
       "items": [
         {
-          "title": "Documentation",
-          "url": "/GNS/documentation/"
+          "title": "GNS",
+          "url": "/GNS/"
         },
         {
-          "title": "Community",
-          "url": "/GNS/community/"
+          "title": "Gigapaxos",
+          "url": "/gigapaxos/"
         },
         {
-          "external_url": "https://github.com/MobilityFirst/GNS",
+          "external_url": "https://github.com/MobilityFirst",
           "title": "Github"
         }
       ]
