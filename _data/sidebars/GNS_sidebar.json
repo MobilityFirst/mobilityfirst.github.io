@@ -2,27 +2,27 @@
   "title": "GNS",
   "layer1": [
     {
-      "title": "Java Client",
+      "title": "Server",
       "layer2": [
         {
           "title": "Getting Started",
-          "url": "/GNS/doc/"
+          "url": "/GNS/documentation/"
         },
         {
           "title": "Command Line Interface",
-          "url": "/GNS/doc/cli/"
+          "url": "/GNS/documentation/cli/"
         },
         {
           "title": "Build from source",
-          "url": "/GNS/doc/build_from_source/"
+          "url": "/GNS/documentation/build_from_source/"
         },
         {
           "title": "Troubleshooting",
-          "url": "/GNS/doc/troubleshooting/"
+          "url": "/GNS/documentation/troubleshooting/"
         },
         {
           "title": "FAQ",
-          "url": "/GNS/doc/faq/"
+          "url": "/GNS/documentation/faq/"
         },
         {
           "title": "Javadoc",

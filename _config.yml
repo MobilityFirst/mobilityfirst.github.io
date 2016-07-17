@@ -3,9 +3,9 @@ permalink: /:categories/:title/
 url: https://mobilityfirst.github.io
 # where you plan to publish your site
 
-topnav_title: MobilityFirst
+topnav_title: Global Name Service
 # this appears on the top navigation bar next to the home button
-site_title: MobilityFirst
+site_title: Global Name Service
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: "MobilityFirst"
