@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 last_updated: July 8, 2016
-sidebar: GNS_sidebar
+sidebar: documentation_sidebar
 toc: true
 ---
 

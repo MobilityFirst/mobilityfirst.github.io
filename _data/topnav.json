@@ -5,11 +5,11 @@
       "items": [
         {
           "title": "Documentation",
-          "url": "/GNS/documentation/"
+          "url": "/documentation/"
         },
         {
           "title": "Community",
-          "url": "/GNS/community/"
+          "url": "/community/"
         },
         {
           "external_url": "https://github.com/MobilityFirst/GNS",
