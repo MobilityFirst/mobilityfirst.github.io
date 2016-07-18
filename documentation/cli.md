@@ -2,25 +2,30 @@
 title: "Command Line Interface"
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
-toc: true
+toc: false
 ---
 
-{% include prerequisites.html %}
+This tutorial outlines the basic functions of the GNS through a simple CLI interface. This is not an example of how to interface with the GNS for application development, but serves as an example of the basic functionality of the GNS.
 
-Start a single-node, local server as
+Prerequisites: Download and setup the GNS according to the instructions on the Getting Started [page]({{ site.baseurl }}/documentation/). You should have your terminal open in the base of the appropriate GNS directory.
+
+## Start the GNS server
+
+Start a single-node, local GNS server as
 
 ```
 bin/gpServer.sh restart all
 ```
+
+This will run the GNS with a local, single-node configuration. More sophisticated deployment configurations are discussed on the Getting Started [page]({{ site.baseurl }}/documentation/)
+
+## Start the CLI client
 
 Start the command-line interface (CLI) client as 
 
 ```
 bin/cli.sh
 ```
-
-The steps for other server configurations are similar and just need to specify the respective server and client properties files using the `-DgigapaxosConfig=` option.
-
 Upon starting the CLI client, you should see output like below with a prompt
 
 ```

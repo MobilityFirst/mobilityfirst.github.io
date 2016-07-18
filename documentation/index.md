@@ -2,16 +2,23 @@
 title: "Getting Started"
 last_updated: July 8, 2016
 sidebar: documentation_sidebar
-toc: true
+toc: false
 ---
 
-{% include prerequisites.html %}
+This page will guide you through running a trivial example client in different configurations.
 
-## Obtaining GNS
+## Obtain the latest release
+Prerequisites: `JRE1.8+`, `bash`, `mongodb (optional)`
+
 Download the latest, stable, binary-only package from the [GNS releases page](https://github.com/MobilityFirst/GNS/releases).
 
-## Single-node, local GNS server
+For instructions on building from the source, go [here].
+
+## Introduction
+
 The GNS is a gigapaxos application, which means that gigapaxos is the distributed engine responsible for replicating and reconfiguring GNS replica nodes as needed. The GNS uses mongodb as its underlying database by default, so it is necessary to have mongodb running (on localhost and its default port) before starting the GNS. If mongodb is not already running, refer to the [mongodb installation instructions page](https://docs.mongodb.com/manual/installation/) to set that up (recommended). If you prefer to not use mongodb for now, refer to the instructions further below to run the GNS in the in-memory database mode (not recommended for production use). 
+
+## Single-node, local GNS server
 
 Start a single-node, local GNS server as 
 

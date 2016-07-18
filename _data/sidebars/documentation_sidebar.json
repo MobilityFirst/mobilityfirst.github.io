@@ -1,7 +1,7 @@
 {
   "layer1": [
     {
-      "title": "Server",
+      "title": "Client Development",
       "layer2": [
         {
           "title": "Getting Started",
@@ -12,8 +12,12 @@
           "url": "/documentation/cli/"
         },
         {
-          "title": "Build from Source",
-          "url": "/documentation/build_from_source/"
+          "title": "Access Control Lists",
+          "url": "/documentation/access_control_lists/"
+        },
+        {
+          "title": "Advanced Queries",
+          "url": "/documentation/advanced_queries/"
         },
         {
           "title": "Troubleshooting",
@@ -30,28 +34,21 @@
       ]
     },
     {
-      "title": "IOS",
-      "url": "/ios_client/"
-    },
-    {
-      "title": "Android",
-      "url": "/android_client/"
-    },
-    {
-      "title": "ActiveCode",
-      "url": "/activecode/"
-    },
-    {
-      "title": "Managed DNS",
-      "url": "/managed_DNS/"
-    },
-    {
-      "title": "msocket",
-      "url": "/msocket/"
-    },
-    {
-      "external_url": "http://www.giga.paxos",
-      "title": "Gigapaxos"
+      "title": "Contribute",
+      "layer2": [
+        {
+          "title": "How to contribute",
+          "url": "/contribute/"
+        },
+        {
+          "title": "Setting up a build environment",
+          "url": "/contribute/build_environment/"
+        },
+        {
+          "title": "Coding Standards",
+          "url": "/contribute/coding_standards/"
+        }
+      ]
     }
   ]
 }
