@@ -35,9 +35,9 @@ Here's an example of how we would add an ACL to allow our friend to
 ``` java
 import edu.umass.cs.gnscommon.GNSCommandProtocol;
 import edu.umass.cs.gnscommon.AclAccessType;
-...
+	...
 	GNSClientCommands client = new GNSClientCommands();
-...
+	...
 
 	//This ensures that the friendly GUID can read our location field
 	client.aclAdd(AclAccessType.READ_WHITELIST, myGuidEntry, "location", friendlyGuidEntry.getGuid());
@@ -46,7 +46,6 @@ import edu.umass.cs.gnscommon.AclAccessType;
 	
 	//Let the Guid associated with our phone make updates to the location field. The logical thing to do here is to have our phone as a sub-GUID and we wouldn't need to do this.
 	client.aclAdd(AclAccessType.WRITE_WHITELIST, myGuidEntry, "location", myPhoneGuidEntry.getGuid());
-
 ```
 
 ## Removing ACLs
@@ -56,7 +55,6 @@ ACLs can be removed a GUID using the `aclRemove` method of the `GNSClientCommand
 Continuing from the example above
 
 ``` java
-
 	//Turns out our friendly GUID wasn't so friendly, so lets remove it
 	client.aclRemove(AclAccessType.READ_WHITELIST, myGuidEntry, "location", friendlyGuidEntry.getGuid());
 ```
