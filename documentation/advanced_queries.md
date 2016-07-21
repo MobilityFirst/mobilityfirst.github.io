@@ -29,8 +29,14 @@ JSONArray result = client.selectQuery(query);
 The syntax is similar to that used for the criteria part of the [find method in Mongodb](https://docs.mongodb.com/manual/reference/method/db.collection.find/). See also the [Query Operators](https://docs.mongodb.com/manual/reference/operator/query/) part of the MongoDB reference manual.
 
 The differences are:
+
 * You omit the outer set of brackets.
 * Field names must be prefaced with a ~ (tilde) (Note: this restriction might go away if we decide to write a more complex parser)
+
+
+There are additional exceptions to the query syntax made necessary by the use of the URI's for the HTTP client.
+
+* You must use parentheses instead of brackets.
 
 ## Query operators
 
@@ -164,11 +170,3 @@ $and:
                   [-97.29004669189453,32.7139892578125]]]}}}},
     {~age:{$gt:60, $lt:999}}]
 ```
-
-Syntax exceptions when using queries with the HTTP Client
-
-There are additional exceptions to the query syntax made necessary by the use of the URI's for the HTTP client.
-
-    You must use parentheses instead of brackets.
-
-That's the only one now, but who uses the HTTP client anymore, anyway? 
