@@ -5,6 +5,9 @@ sidebar: documentation_sidebar
 toc: true
 ---
 
+This page is under construction, please check back soon!
+
+{% comment %}
 ## Introduction
 ACLs provide a way to control who has access to what fields. For example a user may want their home automation system and other services they use to see their location on the GNS, but having that information publicly accessible is extremely undesirable. ACLs allow users to specify who can and can't read and write specific fields of their GUID using blacklists and whitelists.
 
@@ -58,6 +61,7 @@ Continuing from the example above
 	//Turns out our friendly GUID wasn't so friendly, so lets remove it
 	client.aclRemove(AclAccessType.READ_WHITELIST, myGuidEntry, "location", friendlyGuidEntry.getGuid());
 ```
+{% endcomment %}
 
 {% comment %}
 THIS INFORMATION MAY BE OBSOLETE MUST BE VERIFIED

@@ -4,7 +4,9 @@ last_updated: July 21, 2016
 sidebar: documentation_sidebar
 toc: true
 ---
+This page is under construction, please check back soon!
 
+{% comment %}
 ## Introduction
 
 The GNS database can be queried using a general syntax which is very similar to the syntax supported by [MongoDB](https://www.mongodb.com/) with some small differences.
@@ -170,3 +172,4 @@ $and:
                   [-97.29004669189453,32.7139892578125]]]}}}},
     {~age:{$gt:60, $lt:999}}]
 ```
+{% endcomment %}
