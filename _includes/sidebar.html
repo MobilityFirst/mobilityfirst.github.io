@@ -10,7 +10,7 @@ This is where we would put conditionals if we used more than one sidebar
     <li>
         {% if layer1item.external_url %}
         <li><a href="{{layer1item.external_url}}" target="_blank">{{layer1item.title}}</a></li>
-        {% elsif page.url contains layer1item.url %}
+        {% elsif page.url == layer1item.url %} <!-- Highlight current page -->
         <li class="active"><a href="{{layer1item.url | prepend: site.baseurl}}">{{layer1item.title}}</a></li>
         {% elsif layer1item.url %}
         <li><a href="{{layer1item.url | prepend: site.baseurl}}">{{layer1item.title}}</a></li>
@@ -20,7 +20,7 @@ This is where we would put conditionals if we used more than one sidebar
             {% for layer2item in layer1item.layer2 %}
             {% if layer2item.external_url %}
             <li><a href="{{layer2item.external_url}}" target="_blank">{{layer2item.title}}</a></li>
-            {% elsif page.url contains layer2item.url %} <!-- Highlight current page -->
+            {% elsif page.url == layer2item.url %} <!-- Highlight current page -->
             <li class="active"><a href="{{layer2item.url | prepend: site.baseurl}}">{{layer2item.title}}</a></li>
             {% elsif layer2item.url %}
             <li><a href="{{layer2item.url | prepend: site.baseurl}}">{{layer2item.title}}</a></li>
@@ -31,7 +31,7 @@ This is where we would put conditionals if we used more than one sidebar
                     {% for layer3item in layer2item.layer3 %}
                     {% if layer3item.external_url %}
                     <li><a href="{{layer3item.external_url}}" target="_blank">{{layer3item.title}}</a></li>
-                    {% elsif page.url contains layer3item.url %}
+                    {% elsif page.url == layer3item.url %} <!-- Highlight current page -->
                     <li class="active"><a href="{{layer3item.url | prepend: site.baseurl}}">{{layer3item.title}}</a></li>
                     {% else %}
                     <li><a href="{{layer3item.url | prepend: site.baseurl}}">{{layer3item.title}}</a></li>
