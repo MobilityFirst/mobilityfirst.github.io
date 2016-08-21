@@ -5,10 +5,11 @@ sidebar: documentation_sidebar
 toc: false
 ---
 
-This page will guide you through running a trivial example client in different configurations.
+Prerequisites: `JRE1.8+`, `bash`, `mongodb (optional)`
+
+This page will guide you through running an example client with different different configurations.
 
 ## Obtain the latest release
-Prerequisites: `JRE1.8+`, `bash`, `mongodb (optional)`
 
 Download the latest, stable, binary-only package from the [GNS releases page](https://github.com/MobilityFirst/GNS/releases).
 
