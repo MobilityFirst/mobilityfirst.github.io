@@ -24,10 +24,6 @@
           "url": "/documentation/troubleshooting/"
         },
         {
-          "title": "FAQ",
-          "url": "/documentation/faq/"
-        },
-        {
           "title": "Javadoc",
           "url": "/javadoc/index.html"
         }
@@ -35,20 +31,7 @@
     },
     {
       "title": "Contribute",
-      "layer2": [
-        {
-          "title": "How to contribute",
-          "url": "/contribute/"
-        },
-        {
-          "title": "Setting up a build environment",
-          "url": "/contribute/build_environment/"
-        },
-        {
-          "title": "Coding Standards",
-          "url": "/contribute/coding_standards/"
-        }
-      ]
+      "url": "/contribute/"
     }
   ]
 }

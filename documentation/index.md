@@ -13,7 +13,7 @@ This page will guide you through running an example client with different differ
 
 Download the latest, stable, binary-only package from the [GNS releases page](https://github.com/MobilityFirst/GNS/releases).
 
-For instructions on building from the source, go [here].
+For instructions on building from the source, go [here]({{ site.baseurl }}/contribute/).
 
 ## Introduction
 
