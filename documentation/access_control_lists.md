@@ -5,11 +5,32 @@ sidebar: documentation_sidebar
 toc: true
 ---
 
-This page is under construction, please check back soon!
-
-{% comment %}
 ## Introduction
-ACLs provide a way to control who has access to what fields. For example a user may want their home automation system and other services they use to see their location on the GNS, but having that information publicly accessible is extremely undesirable. ACLs allow users to specify who can and can't read and write specific fields of their GUID using blacklists and whitelists.
+ACLs provide a way to control who has access specific fields of a GUID. For example a user may want their home automation system and other services they use to see their location on the GNS, but having that information publicly accessible is extremely undesirable. ACLs allow users to specify who can and can't read and write specific fields of their GUID using blacklists and whitelists.
+
+## ACL example
+Start a GNS server. See the Getting Started (link) page for details.
+
+Start the `ClientACLExample` class:
+
+```
+bin/gpClient.sh edu.umass.cs.gnsclient.examples.ClientACLExample
+```
+
+This class creates two Guids `guid` and `phoneGuid` to demonstrate ACL functionality. As the program executes it prints out what method is called along with the parameters passed. To improve readability some abbreviations are made, for example .getGuid() is not included in the printed statements and the `AclAccessType` prefix is dropped from parameters of the from `AclAccessType.WRITE_WHITELIST`.
+
+The source code is available in the `src/edu/umass/cs/gnsclient/examples/` folder of the source and [on Github](https://github.com/MobilityFirst/GNS/blob/master/src/edu/umass/cs/gnsclient/examples/ClientACLExample.java).
+
+## ACL Operations
+There are three ACL commands that can be issued:
+
+* `aclAdd(AclAccessType accessType, GuidEntry targetGUID, String field, String accesserGUID)` ([doc](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/client/GNSCommand.html#aclAdd-edu.umass.cs.gnscommon.AclAccessType-edu.umass.cs.gnsclient.client.util.GuidEntry-java.lang.String-java.lang.String-))
+
+* `aclGet(AclAccessType accessType, GuidEntry targetGUID, String field, String querierGUID)` ([doc](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/client/GNSCommand.html#aclGet-edu.umass.cs.gnscommon.AclAccessType-edu.umass.cs.gnsclient.client.util.GuidEntry-java.lang.String-java.lang.String-))
+
+* `aclRemove(AclAccessType accessType, GuidEntry targetGUID, String field, String accesserGUID)` ([doc](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/client/GNSCommand.html#aclRemove-edu.umass.cs.gnscommon.AclAccessType-edu.umass.cs.gnsclient.client.util.GuidEntry-java.lang.String-java.lang.String-))
+
+The AclAccessType ([doc](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnscommon/AclAccessType.html)) specifies the read/write whitelist/blacklist that is being modified or read.
 
 ## ACL defaults
 
@@ -23,49 +44,4 @@ The GNS specifies the following defaults for ACLs.
 
 * Group members inherit the access permissions of the group they belong to. Meaning if a group GUID has access to a field in a random GUID, members of that group will have the same access.
 
-* Group members cannot, however, access the fields of the group GUID itself. Group GUIDS give other guids access to OTHER guids fields, not their own (the fields of the group GUID). The original design for group GUIDs fields didn't consider providing access to members. It was more for using the group as a shortcut for specifying access to other GUIDs fields for a bunch of fields. We're looking at changing this.
-
-## Adding ACLs
-ACLs can be added to a GUID using the `aclAdd` method of the `GNSClientCommands` class. The full method declaration is `aclAdd(AclAccessType accessType, GuidEntry targetGuid, String field, String accesserGuid)`.
-
-* `AclAccessType accessType`: One of the four AclAccessTypes `READ_WHITELIST`, `WRITE_WHITELIST`, `READ_BLACKLIST`, `WRITE_BLACKLIST`.
-* `GuidEntry targetGuid`: The GUID that the ACL will be added to.
-* `String field`: The field that the ACL will be applied to.
-* `String accesserGuid`: The GUID to add to the ACL.
-
-Here's an example of how we would add an ACL to allow our friend to 
-
-``` java
-import edu.umass.cs.gnscommon.GNSCommandProtocol;
-import edu.umass.cs.gnscommon.AclAccessType;
-	...
-	GNSClientCommands client = new GNSClientCommands();
-	...
-
-	//This ensures that the friendly GUID can read our location field
-	client.aclAdd(AclAccessType.READ_WHITELIST, myGuidEntry, "location", friendlyGuidEntry.getGuid());
-	//Block everyone else from reading the location field
-	client.aclAdd(AclAccessType.READ_BLACKLIST, myGuidEntry, "location", GNSCommandProtocol.ALL_GUIDS);
-	
-	//Let the Guid associated with our phone make updates to the location field. The logical thing to do here is to have our phone as a sub-GUID and we wouldn't need to do this.
-	client.aclAdd(AclAccessType.WRITE_WHITELIST, myGuidEntry, "location", myPhoneGuidEntry.getGuid());
-```
-
-## Removing ACLs
-
-ACLs can be removed a GUID using the `aclRemove` method of the `GNSClientCommands` class. The full method declaration is `aclRemove(AclAccessType accessType, GuidEntry guid, String field, String accesserGuid)`. The parameters are the same as the `aclAdd` method, but the `accessorGuid` is removed from the ACL.
-
-Continuing from the example above
-
-``` java
-	//Turns out our friendly GUID wasn't so friendly, so lets remove it
-	client.aclRemove(AclAccessType.READ_WHITELIST, myGuidEntry, "location", friendlyGuidEntry.getGuid());
-```
-{% endcomment %}
-
-{% comment %}
-THIS INFORMATION MAY BE OBSOLETE MUST BE VERIFIED
-IT WILL NOT BE RENDERED ON THE SITE
-
-One other possible subtle gotcha is in the handling of ALLFIELDS accessin ACLs. If you put ALLFIELDS as well as a GUID, and then you remove ALLFIELDS the GUID will still be there. The handling of the actual list is not terribly smart in that way right now. 
-{% endcomment %}
+* Group members cannot, however, access the fields of the group GUID itself. Group GUIDS give other guids access to OTHER guids fields, not their own (the fields of the group GUID).
