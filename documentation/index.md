@@ -17,11 +17,11 @@ For instructions on building from the source, go [here]({{ site.baseurl }}/contr
 
 ## Introduction
 
-The GNS is a gigapaxos application, which means that gigapaxos is the distributed engine responsible for replicating and reconfiguring GNS replica nodes as needed. The GNS uses mongodb as its underlying database by default, so it is necessary to have mongodb running (on localhost and its default port) before starting the GNS. If mongodb is not already running, refer to the [mongodb installation instructions page](https://docs.mongodb.com/manual/installation/) to set that up (recommended). If you prefer to not use mongodb for now, refer to the instructions further below to run the GNS in the in-memory database mode (not recommended for production use). 
+The GNS is a gigapaxos application, which means that gigapaxos is the distributed engine responsible for replicating and reconfiguring GNS replica nodes as needed. The GNS uses mongodb as its underlying database by default, so it is necessary to have mongodb running (on localhost and its default port) before starting the GNS. If mongodb is not already running, refer to the [mongodb installation instructions page](https://docs.mongodb.com/manual/installation/) to set that up (recommended). If you prefer to not use mongodb for now, refer to the instructions further below to run the GNS in the in-memory database mode (not recommended for production use).
 
 ## Single-node, local GNS server
 
-Start a single-node, local GNS server as 
+Start a single-node, local GNS server as
 
 ```
 bin/gpServer.sh start all
@@ -36,7 +36,9 @@ To connect to the GNS server above using a Java client, we will use a simple cli
 bin/gpClient.sh edu.umass.cs.gnsclient.examples.ClientExample
 ```
 
-The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to this [troubleshooting]({{ site.baseurl }}/documentation/troubleshooting/) page for common possible reasons.
+The client's output should be self-explanatory and it should exit gracefully with a success message. If it runs into exceptions, refer to the [troubleshooting]({{ site.baseurl }}/documentation/troubleshooting/) page for common possible reasons.
+
+This example client uses the [GNSClient](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/client/GNSClient.html) class to execute [GNSCommand](https://mobilityfirst.github.io/GNS/doc/edu/umass/cs/gnsclient/client/GNSCommand.html)s. The GNSClient can execute commands in a synchronous and asynchronous manner, but in the above example commands are executed synchronously.
 
 ## In-memory database mode
 If you prefer to not use mongodb, uncomment or enter `IN_MEMORY_DB=true` in the default configuration properties file, `gigapaxos.properties`. Using the in-memory mode does not affect durability or fault-tolerance as they are ensured by gigapaxos, however, the database size will be limited by memory, so it is not recommended for production use.
@@ -77,8 +79,8 @@ bin/gpServer.sh -DgigapaxosConfig=conf/gnsserver.3local.properties restart all
 bin/gpClient.sh -DgigapaxosConfig=conf/gnsclient.3local.properties edu.umass.cs.gnsclient.examples.ClientExample
 ```
 
-## Distributed GNS 
-Firing up distributed GNS servers on remote machines is nearly identical. It is necessary that the username on all of the remote machines is the same and, if different from the current shell's username, it must be specified using the `USERNAME` property in the properties file. It is convenient to set up passwordless ssh a priori from the local machine to the remote hosts, otherwise the script will prompt for a password for each remote host.
+## Distributed GNS
+Firing up distributed GNS servers on remote machines is nearly identical. It is necessary that the username on all of the remote machines is the same and, if different from the current shell's username, it must be specified using the `USERNAME` property in the properties file. It is convenient to set up [passwordless ssh](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) a priori from the local machine to the remote hosts, otherwise the script will prompt for a password for each remote host.
 
 ```
 bin/gpServer.sh -DgigapaxosConfig=conf/gnsserver.ec2.properties restart all
