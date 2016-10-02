@@ -1,6 +1,5 @@
 ---
 title: "Managed DNS"
-last_updated: July 8, 2016
 sidebar: documentation_sidebar
 toc: false
 ---

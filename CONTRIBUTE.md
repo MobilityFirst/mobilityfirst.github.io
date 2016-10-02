@@ -4,7 +4,7 @@ This document outlines how to contribute content to this website. It does not di
 Because this site is based on Jekyll, many of the pages are written in Markdown, allowing anyone with a basic understanding of Markdown or with a [reference guide](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) on hand to make changes.
 
 ## Methods of editing
-There are two ways to edit the content: 
+There are two ways to edit the content:
 
 * Clone/fork this repo
   * Cloning/fork the repository and make your changes. If you wish to preview the changes locally you must follow the  instructions in README.md on building the site locally.
@@ -38,15 +38,13 @@ Here is an example Front Matter block:
 ```
 ---
 title: "My Example Page"
-last_updated: June 28, 2016
 sidebar: documentation_sidebar
 toc: true
 ---
 ```
 * title: The title rendered at the top of the page. The quotation marks are optional but let us include special characters like colons.
-* last_updated: This field will be rendered in the footer.
-* sidebar: The sidebar that will appear on this page. If no sidebar is specified then the page will render without one. This is also used for a consitency check between the title listed in the sidebar and the title of the page. Currently there is only one sidebar: documentation_sidebar
-* toc: Set to false to remove the table of contents generated at the beginning of the page. NOTE: Header 1, single #, elements are not included in the TOC, only Header 2 and below.
+* sidebar: The sidebar that will appear on this page. If no sidebar is specified then the page will render without one. Currently there is only one sidebar: documentation_sidebar
+* toc: Set to false to remove the table of contents generated at the beginning of the page. NOTE: Header 1 (single #) elements are not included in the TOC, only Header 2 and below.
 
 ### 2. Update the sidebar
-Add the page to the sidebar file so that a link will be rendered in the sidebar. This file can be found at `_data/sidebars/documentation_sidebar.json`. You must include a title and and URL field for the sidebar item to be properly rendered. Use the same format as described to `Intra-site links` section, with the exception that you don't need to include `{{ site.baseurl }}`. The existing content of the sidebar file should serve as a good example of how to add content. 
+Add the page to the sidebar file so that a link will be rendered in the sidebar. This file can be found at `_data/sidebars/documentation_sidebar.json`. You must include a title and and URL field for the sidebar item to be properly rendered. Use the same format as described to `Intra-site links` section, with the exception that you don't need to include `{{ site.baseurl }}`. The existing content of the sidebar file should serve as a good example of how to add content.

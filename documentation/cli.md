@@ -1,6 +1,5 @@
 ---
 title: "Command Line Interface"
-last_updated: July 8, 2016
 sidebar: documentation_sidebar
 toc: false
 ---
@@ -21,7 +20,7 @@ This will run the GNS with a local, single-node configuration. More sophisticate
 
 ## Start the CLI client
 
-Start the command-line interface (CLI) client as 
+Start the command-line interface (CLI) client as
 
 ```
 bin/cli.sh
@@ -48,7 +47,7 @@ The above will email a verification code to the specified email address if email
 GNS CLI - support@gns.name>account_verify support@gns.name 596E11
 Account verified.
 ```
- 
+
 Create a field in the created GUID as
 
 ```

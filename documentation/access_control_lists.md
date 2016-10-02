@@ -1,6 +1,5 @@
 ---
 title: "Access Control Lists"
-last_updated: July 21, 2016
 sidebar: documentation_sidebar
 toc: true
 ---

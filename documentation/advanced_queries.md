@@ -1,6 +1,5 @@
 ---
 title: "Advanced queries"
-last_updated: July 21, 2016
 sidebar: documentation_sidebar
 toc: true
 ---
@@ -24,7 +23,7 @@ GNSClientCommands client = new GNSClientCommands();
 
 String query = "~hometown":"whoville"
 JSONArray result = client.selectQuery(query);
-``` 
+```
 
 ## Query syntax
 
@@ -158,7 +157,7 @@ Given records in the GNS that contains the geoLocationCurrent field as a GeoJSON
 You can execute a query like the one below to find records contained in the polygon and that match other attributes.
 
 ```java
-$and: 
+$and:
     [{~geoLocationCurrent:
         {$geoWithin:
             {$geometry:
