@@ -8,7 +8,7 @@ toc: true
 ACLs provide a way to control who has access specific fields of a GUID. For example a user may want their home automation system and other services they use to see their location on the GNS, but having that information publicly accessible is extremely undesirable. ACLs allow users to specify who can and can't read and write specific fields of their GUID using blacklists and whitelists.
 
 ## ACL example
-Start a GNS server. See the Getting Started (link) page for details.
+Start a GNS server. See the [Getting Started] ({{ site.baseurl }}/documentation/) page for details.
 
 Start the `ClientACLExample` class:
 
