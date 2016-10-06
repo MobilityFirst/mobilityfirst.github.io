@@ -39,8 +39,11 @@ The GNS specifies the following defaults for ACLs.
 
 * All subguids (those associated with an account GUID) give read and write access for all fields to their account guid.
 
+{% comment %}
 ### Group GUIDs
 
 * Group members inherit the access permissions of the group they belong to. Meaning if a group GUID has access to a field in a random GUID, members of that group will have the same access.
 
 * Group members cannot, however, access the fields of the group GUID itself. Group GUIDS give other guids access to OTHER guids fields, not their own (the fields of the group GUID).
+
+{% endcomment %}
