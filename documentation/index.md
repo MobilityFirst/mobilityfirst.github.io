@@ -20,7 +20,7 @@ The GNS is a gigapaxos application, which means that gigapaxos is the distribute
 
 ## Single-node, local GNS server
 
-Start a single-node, local GNS server as
+Start a single-node, local GNS server as follows
 
 ```
 bin/gpServer.sh start all
